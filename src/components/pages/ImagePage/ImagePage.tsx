@@ -23,7 +23,6 @@ export const ImagePage = () => {
   const token = useAppSelector((state) => state.token.token);
   const navigate = useNavigate();
   const data = useAppSelector((state) => state.image.image);
-  console.log('data: ', data);
   const like = useAppSelector((state) => state.image.like);
   const likedUser = useAppSelector((state) => state.image.likedUser);
   const created = data?.created_at?.slice(0, 10);

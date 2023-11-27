@@ -72,7 +72,7 @@ export const addLike = createAsyncThunk<
     },
   );
 
-  if (res.status !== 200) {
+  if (res.status !== 201) {
     return rejectWithValue('Can not get response. Server Error!');
   }
 
