@@ -1,17 +1,17 @@
 import style from './ImagePage.module.scss';
 import {useEffect} from 'react';
-import {
-  addLike,
-  clearImage,
-  imageRequestAsync,
-  removeLike,
-} from '../../../store/imageSlice/imageSlice';
+import {clearImage} from '../../../store/imageSlice/imageSlice';
 import cn from 'classnames';
 import {clearPhotos} from '../../../store/photo/photosSlice';
 import {useNavigate, useParams} from 'react-router-dom';
 import {ReactComponent as LikeIcon} from '../../../assets/clickLike.svg';
 import {useAppSelector} from '../../../hooks/hookSelector';
 import {useAppDispatch} from '../../../hooks/hookDispatch';
+import {
+  addLike,
+  imageRequestAsync,
+  removeLike,
+} from '../../../store/imageSlice/imageAction';
 
 type ImagePageId = {
   id: string;

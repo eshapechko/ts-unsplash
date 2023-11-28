@@ -3,10 +3,11 @@ import {Svg} from '../../../UI/SVG/Svg';
 import AuthIconPath from '../../../assets/auth.svg';
 import {urlAuth} from '../../../api/auth';
 import {useEffect, useState} from 'react';
-import {authLogout, authRequestAsync} from '../../../store/auth/authSlice';
+import {authLogout} from '../../../store/auth/authSlice';
 import {deleteToken} from '../../../store/token/tokenSlice';
 import {useAppSelector} from '../../../hooks/hookSelector';
 import {useAppDispatch} from '../../../hooks/hookDispatch';
+import {authRequestAsync} from '../../../store/auth/authAction';
 
 export const Auth = () => {
   const dispatch = useAppDispatch();

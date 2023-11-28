@@ -1,15 +1,12 @@
 import {Card} from './Card/Card';
 import style from './List.module.scss';
 import {useEffect, useRef} from 'react';
-import {
-  clearPhotos,
-  photosRequestAsync,
-  updatePage,
-} from '../../../store/photo/photosSlice';
+import {clearPhotos, updatePage} from '../../../store/photo/photosSlice';
 import {Outlet} from 'react-router-dom';
 import Masonry from 'react-masonry-css';
 import {useAppSelector} from '../../../hooks/hookSelector';
 import {useAppDispatch} from '../../../hooks/hookDispatch';
+import {photosRequestAsync} from '../../../store/photo/photoAction';
 
 export const List = () => {
   const dispatch = useAppDispatch();
